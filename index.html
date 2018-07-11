@@ -6,23 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testing ..</title>
+    <style>
+        /* .div1, .div2 {
+            display: none;
+        } */
+    </style>
 </head>
 
 <body>
-    <h2>Hello 1</h2>
-    <h2 class="h2">Hello 2</h2>
-    <p class="my-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus asperiores, voluptas minus fugiat quibusdam eveniet
-        nemo provident qui quidem rem itaque ad eum quas veniam quisquam eligendi, magni modi nostrum.</p>
+    <button class="btn" id="btn1">Show div 1</button>
+    <button class="btn" id="btn2">Show div 2</button>
 
     <script>
-        function laugh(x){
-            var l = "";
-            for( var i = 0; i < x; i++ ){
-                l += "ha"
-            }
-            return l + '!';
+        var button1 = document.getElementById('btn1');
+        var button2 = document.getElementById('btn2');
+
+        var div1 = document.createElement('div');
+        div1.innerHTML = '<b>div 1</b>';
+        div1.classList.add('div', 'div1');
+        div1.id = 'div1';
+        button1.onclick = function(){
+            document.body.appendChild(div1);
         }
-        console.log(laugh(4));
+
+        var div2 = document.createElement('div');
+        div2.innerHTML = '<b>div 2</b>';
+        div2.classList.add('div', 'div2');
+        div2.id = 'div2';
+        button2.onclick = function(){
+            document.body.appendChild(div2);
+        }
     </script>
 </body>
 
