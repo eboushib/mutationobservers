@@ -7,15 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testing ..</title>
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
         .div {
             background: #f7f7f7;
             border: 1px solid #eee;
             padding: 20px;
         }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #222;
+            float: left;
+        }
     </style>
 </head>
 
 <body>
+    <div class="sidebar">
+
+    </div>
     <button class="btn" id="btn1">Show div 1</button>
     <button class="btn" id="btn2">Show div 2</button>
 
@@ -27,7 +41,7 @@
         div1.innerHTML = '<b>div 1</b>';
         div1.classList.add('div', 'div1');
         div1.id = 'div1';
-        button1.onclick = function(){
+        button1.onclick = function () {
             document.body.appendChild(div1);
         }
 
@@ -35,7 +49,7 @@
         div2.innerHTML = '<b>div 2</b>';
         div2.classList.add('div', 'div2');
         div2.id = 'div2';
-        button2.onclick = function(){
+        button2.onclick = function () {
             document.body.appendChild(div2);
         }
     </script>
