@@ -1,1 +1,1 @@
-A simple, lightweight & elegant website template teachers
+A simple, lightweight & elegant website template teachers !
