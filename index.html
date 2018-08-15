@@ -12,52 +12,14 @@
             margin: 0;
             padding: 0;
         }
-
-        .div {
-            background: #f7f7f7;
-            border: 1px solid #eee;
-            padding: 20px;
-        }
-
-        .sidebar {
-            width: 200px;
-            height: 100vh;
-            background: #9e9e9e;
-            float: left;
-        }
     </style>
 </head>
 
 <body>
-    <div class="sidebar">
-
-    </div>
-    <button class="btn" id="btn1">Show div 1</button>
-    <button class="btn" id="btn2">Show div 2</button>
-
-
+    <p class="testing">Testing ..</p>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        var button1 = document.getElementById('btn1');
-        var button2 = document.getElementById('btn2');
-
-        var div1 = document.createElement('div');
-        div1.innerHTML = '<b>div 1</b>';
-        div1.classList.add('div', 'div1');
-        div1.id = 'div1';
-        button1.onclick = function () {
-            document.body.appendChild(div1);
-        }
-
-        var div2 = document.createElement('div');
-        div2.innerHTML = '<b>div 2</b>';
-        div2.classList.add('div', 'div2');
-        div2.id = 'div2';
-        button2.onclick = function () {
-            document.body.appendChild(div2);
-        };
-
-        // --->>>
+        //
         (function (win) { // Mutation Observer Function
             'use strict';
 
@@ -105,14 +67,6 @@
             win.ready = ready;
 
         })(this);
-
-        ready('#div1, #div2', function(element){
-            sayHello();
-        });
-
-        function sayHello(){
-            console.log('Hello !');
-        }
     </script>
 </body>
 
